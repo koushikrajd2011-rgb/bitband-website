@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BitBand - YSWS</title>
+        <meta name="description" content="Code it. Wear it. A 3 week YSWS where you code artwork for your own NFC wristband.">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+       <header class="top"><a class="brand" href="#top">BitBand</a></header>
+ 
+<main id="top">
+  <section class="hero">
+    <h1>Code it.<br><span class="wear">Wear it.</span></h1>
+    <p class="sub">You ship code, we ship a wristband. Woven elastic bands with an NFC chip, printed with your coded art.</p>
+    <div class="strap" data-tip="tap to read"><canvas id="band" width="900" height="100" aria-label="Wristband art preview"></canvas><span class="nfc-badge"><span class="nfc"><i></i><i></i><i></i></span></span></div>
+    <div class="cta">
+      <a class="btn primary" href="https://forms.fillout.com/t/REPLACE_RSVP">RSVP</a>
+      <a class="btn" href="REPLACE_GUIDE_LINK">Guide</a>
+      <a class="btn" href="REPLACE_SHOP_LINK">Shop (soon)</a>
+      <a class="btn" href="https://hackclub.slack.com/archives/REPLACE_CHANNEL_ID">Slack</a>
+    </div>
+    <p class="tags">p5.js &bull; Python &bull; Canvas &bull; SVG</p>
+  </section>
+ 
+  <section id="theme" class="theme box">
+    <div>
+      <h2>Current theme</h2>
+      <p id="round-label">Round</p>
+      <p class="big" id="theme-name">Loading...</p>
+    </div>
+    <div>
+      <h2 id="count-title">Round ends in</h2>
+      <p class="big" id="countdown">--</p>
+      <p class="small">Themes are voted in a Slack poll every 6 days. Most votes wins.</p>
+    </div>
+  </section>
+ 
+  <section class="todo">
+    <h2>What to do?</h2>
+    <ol>
+      <li>Pick this round's theme (or anything you like in the free days).</li>
+      <li>Code your art with p5.js, Python, Canvas or SVG. Aim for about 5 hours or less.</li>
+      <li>Render it at 180 x 20 px for the front and back of the band.</li>
+      <li>Make a PR on GitHub with a folder named after you: your code, front.png and back.png.</li>
+      <li>Fill in the form after your PR is accepted.</li>
+    </ol>
+  </section>
+ 
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div id="gallery-grid" class="grid"></div>
+  </section>
+ 
+  <section id="faq">
+    <h2>FAQs</h2>
+    <details><summary>What is BitBand?</summary><p>A YSWS run in Hack Club where you code artwork and we turn it into your own NFC wristband.</p></details>
+    <details><summary>Which tools can I use?</summary><p>Only code: p5.js, Python, Canvas or SVG. No Figma or Procreate.</p></details>
+    <details><summary>How long does it run?</summary><p>About 3 weeks. Every 6 days a new themed round starts. Leftover days are free: make anything.</p></details>
+    <details><summary>How long should a project take?</summary><p>Around 5 hours or less on average. This may change.</p></details>
+    <details><summary>What are BitDrops?</summary><p>Secret, limited-time events that pop up on this site at random. Complete one to earn a holographic sticker sheet or a sticker.</p></details>
+  </section>
+</main>
+ 
+<footer>Code it. Wear it. Made with Hack Club.</footer>
+ 
+<aside id="bitdrop" hidden>
+  <button id="drop-close" aria-label="Close">x</button>
+  <strong>BitDrop!</strong>
+  <p id="drop-text"></p>
+  <a class="btn primary" id="drop-link" href="#">Take the challenge</a>
+</aside>
+<div id="chip" aria-hidden="true"><div id="chip-body"><span class="nfc"><i></i><i></i><i></i></span><span id="chip-label"></span></div></div>
+<script src="script.js"></script>
+</body>
+</html>

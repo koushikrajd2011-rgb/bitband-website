@@ -1,0 +1,389 @@
+:root {
+  --ink: #111;
+  --violet: #6c4bff;
+  --sun: #ffd23f;
+  --line: #d9d9e3;
+  --tint: #f6f5fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font: 17px/1.6 "Space Grotesk", system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.top {
+  text-align: center;
+  padding: 28px 5vw 0;
+}
+
+.brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 5vw 40px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 11vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+}
+
+.wear {
+  color: var(--violet);
+}
+
+h2 {
+  font-size: 1.7rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.sub {
+  max-width: 50ch;
+  margin: 0 auto 32px;
+}
+
+.strap {
+  position: relative;
+  max-width: 860px;
+  margin: auto;
+  padding: 8px;
+  background: var(--ink);
+  border-radius: 8px;
+}
+
+#band {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.nfc-badge {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.nfc {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--sun);
+}
+
+.nfc::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 13px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.nfc i {
+  position: absolute;
+  border: 2px solid transparent;
+  border-right-color: var(--ink);
+  border-radius: 50%;
+}
+
+.nfc i:nth-child(1) {
+  left: 4px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+}
+
+.nfc i:nth-child(2) {
+  left: 0;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.nfc i:nth-child(3) {
+  left: -4px;
+  top: 2px;
+  width: 28px;
+  height: 28px;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.tags {
+  margin-top: 18px;
+  opacity: 0.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 24px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: var(--violet);
+  border-color: var(--violet);
+  color: #fff;
+}
+
+.btn:hover {
+  background: var(--sun);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.box {
+  background: var(--tint);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.theme {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.big {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 4px 0;
+}
+
+.small {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.todo ol {
+  max-width: 64ch;
+  padding-left: 22px;
+}
+
+.todo li {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 12px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  image-rendering: pixelated;
+}
+
+.empty {
+  padding: 24px;
+  border: 2px dashed var(--line);
+  border-radius: 8px;
+  text-align: center;
+}
+
+details {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+}
+
+details[open] {
+  border-color: var(--ink);
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details p {
+  margin: 8px 0 0;
+}
+
+footer {
+  padding: 28px;
+  border-top: 2px solid var(--line);
+  text-align: center;
+  opacity: 0.7;
+}
+
+#bitdrop {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 8;
+  max-width: 280px;
+  padding: 16px;
+  background: var(--sun);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+}
+
+#bitdrop[hidden] {
+  display: none;
+}
+
+#bitdrop button {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
+}
+
+@media (pointer: fine) {
+  body.chip-on,
+  body.chip-on * {
+    cursor: none !important;
+  }
+}
+
+#chip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483647;
+  width: 0;
+  height: 0;
+  display: none;
+  pointer-events: none;
+  will-change: transform;
+}
+
+body.chip-on #chip {
+  display: block;
+}
+
+#chip-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  transition: scale 0.12s;
+}
+
+#chip.hot #chip-body {
+  scale: 1.25;
+}
+
+#chip-label {
+  position: absolute;
+  left: 38px;
+  top: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--ink);
+  color: #fff;
+  font: 600 12px/1.4 "Space Grotesk", sans-serif;
+  white-space: nowrap;
+}
+
+#chip-label:empty {
+  display: none;
+}
+
+.wave {
+  position: fixed;
+  z-index: 2147483646;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 3px solid var(--violet);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: wave 0.6s ease-out forwards;
+}
+
+.wave.w2 {
+  border-color: var(--sun);
+  animation-delay: 0.12s;
+}
+
+@keyframes wave {
+  to {
+    scale: 5;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave {
+    display: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
