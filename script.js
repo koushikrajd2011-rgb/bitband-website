@@ -5,9 +5,7 @@ const CONFIG = {
   totalDays: 21,
   themes: ["TBD (vote in Slack)", "TBD (vote in Slack)", "TBD (vote in Slack)"],
   submissions: [],
-  drops: [
-    {text: "First to build a 180x20 pattern with only 3 colors wins a sticker!", link: "#"}
-  ],
+  drops: [],
   dropChance: 0.35,
   dropSeconds: 45
 };
@@ -25,20 +23,6 @@ function phase(now) {
   }
   return {label: "Event ends in", target: end, theme: "Free build: make anything", round: "Free days"};
 }
-
-function tick() {
-  const p = phase(new Date());
-  $("count-title").textContent = p.label;
-  $("theme-name").textContent = p.theme;
-  $("round-label").textContent = p.round;
-  if (!p.target) { $("countdown").textContent = "--"; return; }
-  let s = Math.max(0, Math.floor((p.target - new Date()) / 1000));
-  const d = Math.floor(s / 86400); s %= 86400;
-  const h = Math.floor(s / 3600); s %= 3600;
-  const m = Math.floor(s / 60);
-  $("countdown").textContent = `${d}d ${h}h ${m}m ${s % 60}s`;
-}
-tick(); setInterval(tick, 1000);
 
 const band = $("band"), g = band.getContext("2d"), cols = ["#6c4bff", "#3ddc97", "#ffd23f", "#ffffff"];
 (function drawBand() {
@@ -90,7 +74,7 @@ if (!CONFIG.submissions.length) {
   });
 }
 
-if (Math.random() < CONFIG.dropChance) {
+if (CONFIG.drops.length && Math.random() < CONFIG.dropChance) {
   setTimeout(() => {
     const d = CONFIG.drops[Math.floor(Math.random() * CONFIG.drops.length)];
     $("drop-text").textContent = d.text; $("drop-link").href = d.link;

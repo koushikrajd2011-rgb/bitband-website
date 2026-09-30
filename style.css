@@ -458,3 +458,45 @@ body.chip-on #chip {
     scroll-behavior: auto;
   }
 }
+
+.email-bar {
+  display: inline-flex;
+  align-items: stretch;
+  margin-top: 32px;
+  padding: 6px;
+  border: 3px solid var(--ink);
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.email-input {
+  width: 280px;
+  max-width: 55vw;
+  padding: 12px 20px;
+  border: 0;
+  background: var(--tint);
+  color: var(--ink);
+  font: 700 1.1rem "Space Grotesk", system-ui, sans-serif;
+}
+
+.email-input::placeholder {
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.email-input:focus {
+  outline: 3px solid var(--violet);
+  outline-offset: -3px;
+}
+
+.email-go {
+  padding: 12px 24px;
+  border: 0;
+  background: #fff;
+  color: var(--ink);
+  font: 700 1.1rem "Space Grotesk", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.email-go:hover {
+  background: var(--sun);
+}

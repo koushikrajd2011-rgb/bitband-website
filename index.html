@@ -16,12 +16,15 @@
     <p class="sub">You ship code, we ship a wristband. Woven elastic bands with an NFC chip, printed with your coded art.</p>
     <div class="strap" data-tip="tap to read"><canvas id="band" width="900" height="100" aria-label="Wristband art preview"></canvas><span class="nfc-badge"><span class="nfc"><i></i><i></i><i></i></span></span></div>
     <div class="cta">
-      <a class="btn primary" href="https://forms.fillout.com/t/REPLACE_RSVP">RSVP</a>
+      <a class="btn primary" href="https://rsvp.soon.it/bit-band">RSVP</a>
       <a class="btn" href="REPLACE_GUIDE_LINK">Guide</a>
       <a class="btn" href="REPLACE_SHOP_LINK">Shop (soon)</a>
-      <a class="btn" href="https://hackclub.slack.com/archives/REPLACE_CHANNEL_ID">Slack</a>
+      <a class="btn" href="https://app.slack.com/client/E09V59WQY1E/C0C4U460R2R">Slack</a>
+      <div class="email-bar">
+        <input class="email-input" id="email-input" type="email" placeholder="Enter your email">
+        <button class="email-go" id="email-btn" type="button">get started</button>
+        </div>
     </div>
-    <p class="tags">p5.js &bull; Python &bull; Canvas &bull; SVG</p>
   </section>
 
   <section id="theme" class="theme box">
@@ -40,30 +43,29 @@
   <section class="todo">
     <h2>What to do?</h2>
     <ol>
-      <li>Pick this round's theme (or anything you like in the free days).</li>
-      <li>Code your art with p5.js, Python, Canvas or SVG. Aim for about 5 hours or less.</li>
-      <li>Render it at 180 x 20 px for the front and back of the band.</li>
-      <li>Make a PR on GitHub with a folder named after you: your code, front.png and back.png.</li>
-      <li>Fill in the form after your PR is accepted.</li>
+      <li>Pick this round's theme in slack through voting. Majority wins!</li>
+      <li>Code your art with p5.js, Python, Canvas or SVG. Try coding your art for about 5 hours or less</li>
+      <li>Render it at 180 x 20 px for the front and back of the band</li>
+      <li>Submit your art through the submission form and you will get NFC chips(currency) to spend at the shop</li>
+      <li>Spend Emm!!!</li>
     </ol>
   </section>
 
   <section id="gallery">
-    <h2>Gallery</h2>
+    <h2>BitBand's Gallery</h2>
     <div id="gallery-grid" class="grid"></div>
   </section>
 
   <section id="faq">
     <h2>FAQs</h2>
-    <details><summary>What is BitBand?</summary><p>A YSWS run in Hack Club where you code artwork and we turn it into your own NFC wristband.</p></details>
-    <details><summary>Which tools can I use?</summary><p>Only code: p5.js, Python, Canvas or SVG. No Figma or Procreate.</p></details>
-    <details><summary>How long does it run?</summary><p>About 3 weeks. Every 6 days a new themed round starts. Leftover days are free: make anything.</p></details>
-    <details><summary>How long should a project take?</summary><p>Around 5 hours or less on average. This may change.</p></details>
-    <details><summary>What are BitDrops?</summary><p>Secret, limited-time events that pop up on this site at random. Complete one to earn a holographic sticker sheet or a sticker.</p></details>
+    <details><summary>What is BitBand?</summary><p>A YSWS run in Hack Club where you code artwork and we turn it into your own NFC wristband</p></details>
+    <details><summary>Which tools can I use?</summary><p>Only code: p5.js, Python, Canvas or SVG. No Figma or Procreate or AI, use the guide to learn</p></details>
+    <details><summary>How long does it run?</summary><p>About 3 weeks. Every 6 days a new themed round starts</p></details>
+    <details><summary>How long should a project take?</summary><p>Around 5 hours or less on average. This may change</p></details>
+    <details><summary>What are BitDrops?</summary><p>Secret, limited-time events that pop up on this site at random. Complete one to earn a holographic sticker sheet(its gonna be for one hour every 6 days so watchout)</p></details>
+    <details><summary>What is a NFC chip?</summary><p>NFC chips(currency) you can earn by making submissions. If you are wondering what an actual NFC chip is, it's a small device that can store and transmit data wirelessly</p></details>
   </section>
 </main>
-
-<footer>Code it. Wear it. Made with Hack Club.</footer>
 
 <aside id="bitdrop" hidden>
   <button id="drop-close" aria-label="Close">x</button>
