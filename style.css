@@ -519,47 +519,19 @@ body.chip-on #chip {
 }
 
 .hand {
-  position: relative;
-  max-width: 440px;
+  width: 100%;
+  max-width: 520px;
   justify-self: center;
-  background: #000;
-  border: 3px solid var(--ink);
-  box-shadow: 8px 8px 0 var(--violet);
-  rotate: 2deg;
+  aspect-ratio: 820 / 964;
+  overflow: hidden;
 }
 
 .hand img {
   display: block;
-  width: 100%;
-}
-
-.hotspot {
-  position: absolute;
-  left: 26%;
-  top: 39%;
-  width: 35%;
-  height: 36%;
-}
-
-.scrap {
-  position: absolute;
-  padding: 6px 16px;
-  background: #fff;
-  color: var(--ink);
-  font: 600 1.2rem "Caveat", cursive;
-  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.3);
-}
-
-.scrap.one {
-  top: -16px;
-  left: -26px;
-  rotate: -6deg;
-}
-
-.scrap.two {
-  bottom: -14px;
-  right: -18px;
-  rotate: 4deg;
+  width: 152.9%;
+  max-width: none;
+  margin-left: -26.5%;
+  margin-top: -18.2%;
 }
 
 .banner {
@@ -585,6 +557,6 @@ body.chip-on #chip {
   }
 
   .hand {
-    max-width: 320px;
+    max-width: 400px;
   }
 }
