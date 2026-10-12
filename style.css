@@ -519,6 +519,7 @@ body.chip-on #chip {
 }
 
 .hand {
+  position: relative;
   width: 100%;
   max-width: 520px;
   justify-self: center;
@@ -532,6 +533,14 @@ body.chip-on #chip {
   max-width: none;
   margin-left: -26.5%;
   margin-top: -18.2%;
+}
+
+.hotspot {
+  position: absolute;
+  left: 16%;
+  top: 60%;
+  width: 21%;
+  height: 18%;
 }
 
 .banner {
