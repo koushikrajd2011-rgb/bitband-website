@@ -6,25 +6,42 @@
 <title>BitBand - YSWS</title>
 <meta name="description" content="Code it. Wear it. A ~3-week YSWS where you code artwork for your own NFC wristband.">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap">
 </head>
 <body>
-<header class="top"><a class="brand" href="#top">BitBand</a></header>
 
-<main id="top">
-  <section class="hero">
-    <h1>Make it.<br><span class="wear">Wear it.</span></h1>
-    <p class="sub">You ship your art, we ship a wristband. Woven elastic bands with your art on both sides.</p>
-    <div class="strap" data-tip="make your BitBand now!!"><canvas id="band" width="900" height="100" aria-label="Wristband art preview"></canvas><span class="nfc-badge"><span class="nfc"><i></i><i></i><i></i></span></span></div>
-    <div class="cta">
-      <a class="btn primary" href="https://rsvp.soon.it/bit-band">RSVP</a>
-      <a class="btn" href="REPLACE_GUIDE_LINK">Guide</a>
-      <a class="btn" href="REPLACE_SHOP_LINK">Shop (soon)</a>
-      <a class="btn" href="https://app.slack.com/client/E09V59WQY1E/C0C4U460R2R">Slack</a>
+<div class="stage">
+  <header class="top"><a class="brand" href="#top">BitBand</a></header>
+
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1>Make it.<br><span class="wear">Wear it.</span></h1>
+      <p class="sub">You ship your art, we ship a wristband. Woven elastic bands with your art on both sides.</p>
       <div class="email-bar">
         <input class="email-input" id="email-input" type="email" placeholder="Enter your email">
         <button class="email-go" id="email-btn" type="button">get started</button>
       </div>
+      <div class="cta">
+        <a class="btn primary" href="https://rsvp.soon.it/bit-band">RSVP</a>
+        <a class="btn" href="REPLACE_GUIDE_LINK">Guide</a>
+        <a class="btn" href="https://app.slack.com/client/E09V59WQY1E/C0C4U460R2R">Slack</a>
+      </div>
     </div>
+
+    <div class="hand">
+      <img src="hand.jpg" alt="A blue and purple wristband">
+      <span class="hotspot" data-tip="hello im orp"></span>
+      <span class="scrap one">hover the band!</span>
+      <span class="scrap two">made with code</span>
+    </div>
+  </div>
+</div>
+
+<div class="banner">Code your artwork and we'll turn it into your very own wristband</div>
+
+<main id="top">
+  <section class="strapwrap">
+    <div class="strap" data-tip="make your BitBand now!!"><canvas id="band" width="900" height="100" aria-label="Wristband art preview"></canvas><span class="nfc-badge"><span class="nfc"><i></i><i></i><i></i></span></span></div>
   </section>
 
   <section id="theme" class="theme box">

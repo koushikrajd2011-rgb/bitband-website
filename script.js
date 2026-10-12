@@ -24,15 +24,38 @@ function phase(now) {
   return {label: "Event ends in", target: end, theme: "Free build: make anything", round: "Free days"};
 }
 
-const band = $("band"), g = band.getContext("2d"), cols = ["#6c4bff", "#3ddc97", "#ffd23f", "#ffffff"];
-(function drawBand() {
-  const W = 180, H = 20, k = band.width / W; band.height = H * k;
-  for (let x = 0; x < W; x++) for (let y = 0; y < H; y++) {
-    const v = Math.sin(x * 0.15) + Math.cos(y * 0.5) + Math.sin((x + y) * 0.07);
-    g.fillStyle = cols[Math.abs(Math.floor(v * 1.3)) % cols.length];
-    g.fillRect(x * k, y * k, k, k);
+function tick() {
+  const p = phase(new Date());
+  $("count-title").textContent = p.label;
+  $("theme-name").textContent = p.theme;
+  $("round-label").textContent = p.round;
+  if (!p.target) { $("countdown").textContent = "--"; return; }
+  let s = Math.max(0, Math.floor((p.target - new Date()) / 1000));
+  const d = Math.floor(s / 86400); s %= 86400;
+  const h = Math.floor(s / 3600); s %= 3600;
+  const m = Math.floor(s / 60);
+  $("countdown").textContent = `${d}d ${h}h ${m}m ${s % 60}s`;
+}
+tick(); setInterval(tick, 1000);
+
+const palettes = {
+  main: ["#6c4bff", "#3ddc97", "#ffd23f", "#ffffff"],
+};
+
+function drawBand(canvas, cols, shift) {
+  const W = 180, H = 20, k = canvas.width / W;
+  const g = canvas.getContext("2d");
+  canvas.height = H * k;
+  for (let x = 0; x < W; x++) {
+    for (let y = 0; y < H; y++) {
+      const v = Math.sin(x * 0.15 + shift) + Math.cos(y * 0.5) + Math.sin((x + y) * 0.07 + shift);
+      g.fillStyle = cols[Math.abs(Math.floor(v * 1.3)) % cols.length];
+      g.fillRect(x * k, y * k, k, k);
+    }
   }
-})();
+}
+
+drawBand($("band"), palettes.main, 0);
 
 if (matchMedia("(pointer: fine)").matches) {
   const chip = $("chip"), label = $("chip-label");
