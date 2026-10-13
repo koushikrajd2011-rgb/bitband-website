@@ -62,13 +62,6 @@ h1 {
   margin: 0 0 20px;
 }
 
-.wear {
-  color: #fff;
-  -webkit-text-stroke: 8px var(--ink);
-  paint-order: stroke fill;
-  text-shadow: 6px 6px 0 var(--violet);
-}
-
 h2 {
   font-size: 1.9rem;
   letter-spacing: -0.02em;
