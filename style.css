@@ -4,11 +4,11 @@
 
 :root {
   --ink: #111;
-  --violet: #6c4bff;
-  --mint: #3ddc97;
+  --accent: #1a8878;
+  --mint: #a8ecc9;
   --sun: #ffd23f;
-  --line: #e7e5f5;
-  --tint: #f5f3ff;
+  --line: #d4ebe1;
+  --tint: #eaf7f1;
 }
 
 html {
@@ -425,7 +425,7 @@ body.chip-on #chip {
 }
 
 .wave.w2 {
-  border-color: var(--mint);
+  border-color: var(--sun);
   animation-delay: 0.12s;
 }
 

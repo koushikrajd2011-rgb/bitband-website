@@ -39,7 +39,7 @@ function tick() {
 tick(); setInterval(tick, 1000);
 
 const palettes = {
-  main: ["#6c4bff", "#3ddc97", "#ffd23f", "#ffffff"],
+  main: ["#1a8878", "#3ddc97", "#ffd23f", "#ffffff"],
 };
 
 function drawBand(canvas, cols, shift) {
